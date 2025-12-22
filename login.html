@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idefix · Acceso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+    <main>
+        <section class="login-section">
+            <img src="assets/logo.png" class="logo-large" alt="Idefix">
+            <h1>Iniciar sesión</h1>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Correo electrónico" required autocomplete="username">
+                <input type="password" id="login-password" placeholder="Contraseña" required autocomplete="current-password">
+                <button type="submit" class="main-btn">Entrar</button>
+            </form>
+            <button id="google-login-btn" type="button" class="main-btn alt">Entrar con Google</button>
+            <hr>
+            <h2>Crear cuenta</h2>
+            <form id="register-form">
+                <input type="text" id="register-name" placeholder="Nombre" maxlength="32" required>
+                <input type="email" id="register-email" placeholder="Correo electrónico" required autocomplete="username">
+                <input type="password" id="register-password" placeholder="Contraseña" required autocomplete="new-password">
+                <button type="submit" class="main-btn">Registrarse</button>
+            </form>
+            <div id="login-msg"></div>
+        </section>
+    </main>
+    <script src="lib/firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

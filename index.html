@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idefix · Mis Objetivos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+    <header class="header">
+        <img src="assets/logo.png" class="logo" alt="Idefix">
+        <div class="user-menu" id="user-menu">
+            <!-- Perfil minimalista y botón logout -->
+        </div>
+    </header>
+    <main>
+        <section id="goals-section">
+            <h1>Mis Objetivos</h1>
+            <button id="add-goal-btn" class="main-btn">+ Nuevo Objetivo</button>
+            <div id="goals-list" class="goals-list"></div>
+        </section>
+        <!-- Modal para crear/editar objetivo -->
+        <div id="goal-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" id="close-goal-modal">&times;</span>
+                <h2 id="goal-modal-title">Nuevo objetivo</h2>
+                <form id="goal-form">
+                    <input type="text" id="goal-title" placeholder="Título" maxlength="60" required>
+                    <textarea id="goal-desc" placeholder="Descripción (opcional)"></textarea>
+                    <label for="goal-privacy">Visibilidad:
+                        <select id="goal-privacy">
+                            <option value="private">Privado</option>
+                            <option value="friends">Sólo amigos</option>
+                            <option value="public">Público</option>
+                        </select>
+                    </label>
+                    <button type="submit" class="main-btn">Guardar</button>
+                </form>
+            </div>
+        </div>
+        <!-- Modal para ver comentarios y reacciones -->
+        <div id="social-modal" class="modal hidden">
+            <div class="modal-content social">
+                <span class="close" id="close-social-modal">&times;</span>
+                <h2>Comentarios y Reacciones</h2>
+                <div id="goal-social"></div>
+                <form id="comment-form">
+                    <input type="text" id="comment-input" maxlength="150" placeholder="Comenta tu argumento" required>
+                    <button type="submit" class="main-btn">Comentar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="lib/firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
